@@ -11,7 +11,7 @@ export default function Footer() {
           <div className="space-y-6">
             <div className="flex items-center space-x-3">
               <Car className="h-8 w-8 text-blue-500 dark:text-blue-400" />
-              <span className="text-2xl font-bold text-white">DriveLuxe</span>
+              <span className="text-2xl font-bold text-white">Green CarBook</span>
             </div>
             <p className="text-gray-400 dark:text-gray-500 leading-relaxed">
               Experience luxury on wheels with our premium car rental service. We provide exceptional vehicles and unmatched customer service for your journey.
@@ -67,7 +67,7 @@ export default function Footer() {
                 <div>
                   <p className="text-white font-medium">Phone</p>
                   <a href="tel:+1234567890" className="text-gray-400 hover:text-white transition-colors duration-300">
-                    +1 (234) 567-890
+                    +8801765444480
                   </a>
                 </div>
               </div>
@@ -75,8 +75,8 @@ export default function Footer() {
                 <Mail className="w-5 h-5 text-blue-500 mt-1" />
                 <div>
                   <p className="text-white font-medium">Email</p>
-                  <a href="mailto:info@driveluxe.com" className="text-gray-400 hover:text-white transition-colors duration-300">
-                    info@driveluxe.com
+                  <a href="mailto:greenviewsoft@gmail.com" className="text-gray-400 hover:text-white transition-colors duration-300">
+                    Greenviewsoft@gmail.com
                   </a>
                 </div>
               </div>
@@ -85,7 +85,7 @@ export default function Footer() {
                 <div>
                   <p className="text-white font-medium">Address</p>
                   <p className="text-gray-400">
-                    123 Luxury Drive, Beverly Hills, CA 90210
+                  Fredericton, New Brunswick, Canada 
                   </p>
                 </div>
               </div>
@@ -116,7 +116,7 @@ export default function Footer() {
       <div className="border-t border-gray-800 dark:border-gray-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <p className="text-gray-400 dark:text-gray-500 text-sm text-center">
-            © {new Date().getFullYear()} DriveLuxe. All rights reserved.
+            © {new Date().getFullYear()} Green CarBook. All rights reserved.
           </p>
         </div>
       </div>

@@ -12,7 +12,7 @@ interface User {
 
 const NAV_LINKS = [
   { name: "Home", path: "/" },
-  { name: "Browse Cars", path: "/browse" },
+  { name: "Browse Cars", path: "/cars" },
   { name: "Contact", path: "/contact" }
 ];
 
@@ -72,7 +72,7 @@ function Header() {
             <span className={`text-2xl font-bold ${
               scrolled ? "text-gray-900" : "text-white"
             }`}>
-              DriveLuxe
+            Green Carbook
             </span>
           </Link>
 

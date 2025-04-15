@@ -55,7 +55,7 @@ export const carAPI = {
 
   getUserBookings: async () => {
     try {
-      const response = await api.get('/bookings'); // ⬅️ Removed extra /v1
+      const response = await api.get('/bookings'); 
       return response.data;
     } catch (error) {
       console.error('Error fetching bookings:', error);

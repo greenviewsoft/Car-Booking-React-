@@ -1,3 +1,4 @@
+// types.ts
 export interface Car {
   id: number;
   model: string;
@@ -9,6 +10,22 @@ export interface Car {
   seats: number;
   doors: number;
   fuel_type: string;
-  status: number; // Changed from 'active' to 'status'
+  transmission?: string;
+  description?: string;
+  status: number;
+  // Remove phone from here - it doesn't belong in Car type
 }
 
+export interface Booking {
+  id?: number;
+  car_id: number;
+  user_id?: number;
+  pickup_location: string;
+  drop_location: string;
+  start_date: string;
+  passengers: number;
+  phone: string; 
+  note?: string;
+  status?: string;
+  total_price?: string;
+}

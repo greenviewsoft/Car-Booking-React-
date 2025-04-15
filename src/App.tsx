@@ -7,9 +7,9 @@ import Newsletter from "./components/Newsletter";
 import Footer from "./components/Footer";
 import CategoryCars from "./components/CategoryCars";
 import Dashboard from "./components/Dashboard";
-import MyBookings from "./components/MyBookings";
 import { Toaster } from "react-hot-toast";
 import { Loader } from "lucide-react";
+import Contact from "./components/Contact";
 
 // Loading component
 const LoadingSpinner = () => (
@@ -33,6 +33,14 @@ const HomePage = () => (
         title="Regular Cars"
         description="Reliable and comfortable vehicles for everyday use"
       />
+
+<CategoryCars 
+        category="luxury"
+        title="luxury Cars"
+        description="Luxury Reliable and comfortable vehicles for everyday use"
+      />
+
+
       <Benefits />
       <Newsletter />
     </div>
@@ -73,7 +81,7 @@ function App() {
                 </div>
               } />
               <Route path="/dashboard/*" element={<Dashboard />} />
-              <Route path="/bookings" element={<MyBookings />} />
+              <Route path="/contact" element={<Contact />}  />
             </Routes>
           </Suspense>
         </main>
@@ -84,10 +92,3 @@ function App() {
 }
 
 export default App;
-
-
-
-
-
-
-
