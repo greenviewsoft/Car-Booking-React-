@@ -17,7 +17,7 @@ const PopularCars = () => {
         console.log('PopularCars: Fetching cars...');
         const response = await carService.getAllCars();
         console.log('PopularCars: Raw response:', response);
-        
+
         // Handle the specific API response structure
         let carsData;
         if (response?.success === true && response?.data?.data && Array.isArray(response.data.data)) {
@@ -26,16 +26,16 @@ const PopularCars = () => {
           // Fall back to the normalize function for other structures
           carsData = carService.normalizeCarData(response);
         }
-        
+
         console.log('PopularCars: Extracted cars data:', carsData);
-        
+
         // Transform the data
-        const transformedCars = carsData.map((car: any) => 
+        const transformedCars = carsData.map((car: any) =>
           carService.transformCarData(car)
         );
 
         console.log('PopularCars: Transformed cars:', transformedCars);
-        
+
         // Take first 6 cars
         const displayCars = transformedCars.slice(0, 6);
         setCars(displayCars);
@@ -43,7 +43,7 @@ const PopularCars = () => {
         console.error('Error fetching cars in PopularCars:', err);
         setError('Failed to load cars. Please try again later.');
         toast.error('Failed to load cars');
-        
+
         // In development, use mock data
         if (import.meta.env.DEV) {
           console.log('Using mock data for development');
@@ -93,9 +93,9 @@ const PopularCars = () => {
           {cars.map((car, index) => (
             <div key={car.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
               <div className="relative h-48">
-                <img 
-                  src={carService.getImageUrl(car.image_url)} 
-                  alt={car.model} 
+                <img
+                  src={carService.getImageUrl(car.image_url)}
+                  alt={car.model}
                   className="w-full h-full object-cover"
                 />
                 {car.available !== 1 && (
@@ -118,8 +118,8 @@ const PopularCars = () => {
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-lg font-bold text-blue-600">${car.daily_rate}/day</span>
-                  <Link 
-                    to={`/cars/${car.id}`} 
+                  <Link
+                    to={`/cars/${car.id}`}
                     className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
                   >
                     View Details
